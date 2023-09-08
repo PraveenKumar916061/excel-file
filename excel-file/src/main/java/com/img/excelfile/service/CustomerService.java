@@ -17,7 +17,7 @@ public class CustomerService {
     public void saveCustomerData(MultipartFile file){
         if(ExcelFileUpload.isValidFile(file)){
             try {
-                List<Customer> customers=ExcelFileUpload.getCustomerDatFromExcel(file.getInputStream());
+                List<Customer> customers=ExcelFileUpload.getCustomerDataFromExcel(file.getInputStream());
                 customerRepository.saveAll(customers);
             } catch (IOException e) {
                 throw new RuntimeException("Invalid file");
