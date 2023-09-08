@@ -21,7 +21,7 @@ public class ExcelFileUpload {
         return Objects.equals(file.getContentType(),"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     }
 
-    public static List<Customer> getCustomerDatFromExcel(InputStream inputStream){
+    public static List<Customer> getCustomerDataFromExcel(InputStream inputStream){
         List<Customer> customers=new ArrayList<>();
 
         try {
